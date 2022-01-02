@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
-	// "ioutil"
+	"io/ioutil"  
+
 )
 const url="https://aviabird.com"
 func main(){

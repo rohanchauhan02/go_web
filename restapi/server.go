@@ -79,14 +79,6 @@ func main(){
 	fmt.Println("Server is running on port 1323")
 	e:=echo.New()
 
-	//Root level middleware
-	e.Use(middleware.Logger())
-	e.Use(middleware.Recover())
-
-	g.Use(middleware.BasicAuth(func(username,password string,c echo)))
-
-
-
 	//route
 	e.GET("/",hello)
 	e.GET("/users/:id",getUser)
